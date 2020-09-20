@@ -7,4 +7,6 @@ const Pokemon = props => {
     return <div>this is the page for pokemon with id: {pokemonData.id}</div>;
 }
 
+//just a comment
+
 export default Pokemon;
