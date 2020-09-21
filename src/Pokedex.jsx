@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { AppBar, Toolbar, Grid, Card, CircularProgress, CardContent, CardMedia, Typography } from '@material-ui/core';
+import { AppBar, Toolbar, Grid, Card, CircularProgress, CardContent, CardMedia, Typography, CardActionArea, CardHeader } from '@material-ui/core';
 import { makeStyles } from '@material-ui/styles'
 import mockData from './mockupData/mockData'
 
@@ -25,11 +25,14 @@ const getPokemonCard = (props, data, classes) => {
     const sprite = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${data.id}.png`
     return (
         <Grid item xs={4} key={data.id}>
-            <Card onClick={() => history.push(`/${data.id}`)}>
-                <CardMedia className={classes.cardMedia} image={sprite} style={{ width: "130px", height: "130px" }}/>
-                <CardContent>
-                    <Typography className={classes.cardContent}>{`${data.id}. ${toFirstCharUppercase(data.name)}`}</Typography>
-                </CardContent>
+            <Card>
+                <CardHeader title={`${data.id}. ${toFirstCharUppercase(data.name)}`}/>
+                <CardActionArea onClick={() => history.push(`/${data.id}`)}>
+                    <CardMedia className={classes.cardMedia} image={sprite} style={{ width: "130px", height: "130px" }}/>
+                    <CardContent>
+                        bla
+                    </CardContent>
+                </CardActionArea>
             </Card>
         </Grid>
     )

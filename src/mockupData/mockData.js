@@ -44,7 +44,7 @@ export default {
       id: 2,
       species: {
         name: "ivysaur",
-        url: "https://pokeapi.co/api/v2/pokemon-species/2/",
+        url: "",
       },
       height: 10,
       types: [
