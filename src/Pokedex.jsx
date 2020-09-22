@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { AppBar, Toolbar, Grid, Card, CircularProgress, CardContent, CardMedia, Typography, CardActionArea, CardHeader } from '@material-ui/core';
 import { makeStyles } from '@material-ui/styles'
 import mockData from './mockupData/mockData'
+import { toFirstCharUppercase } from './utils/utils';
 
 const useStyles = makeStyles({
     pokedexContainer: {
@@ -16,9 +17,6 @@ const useStyles = makeStyles({
         textAlign: 'center'
     }
 });
-
-const toFirstCharUppercase = name => 
-    name.charAt(0).toUpperCase() + name.slice(1);
 
 const getPokemonCard = (props, data, classes) => {
     const { history } = props;
