@@ -1,17 +1,19 @@
 import React from 'react';
 import Pokemon from './models/Pokemon';
 import Pokedex from './Pokedex';
+import { AppBar, Toolbar } from '@material-ui/core';
 import {Route, Switch} from 'react-router-dom';
 
 const App = () => (
-  <Switch>
+    <Switch>
     <Route exact path="/" render={(props) => <Pokedex {...props} />} />
     <Route
       exact
       path="/:pokemonId"
       render={(props) => <Pokemon {...props} />}
-    />
-  </Switch>
+      />
+      
+    </Switch>
 );
 
 export default App;

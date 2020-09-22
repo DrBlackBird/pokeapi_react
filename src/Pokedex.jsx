@@ -45,7 +45,7 @@ const Pokedex = props => {
     return (
         <>
         <AppBar position="static">
-            <Toolbar />
+          <Toolbar />
         </AppBar>
         { pokemonData ? (
             <Grid container spacing={2} className={classes.pokedexContainer}>
@@ -57,7 +57,6 @@ const Pokedex = props => {
         ) : (
             <CircularProgress />
         )}
-        
         </>
     );
 }
